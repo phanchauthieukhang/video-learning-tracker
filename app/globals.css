@@ -1,0 +1,245 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 33% 98%;
+    /* #faf8f5 - Warm Archive Parchment */
+    --foreground: 20 14% 12%;
+    /* #1c1917 - Deep Ink Charcoal */
+    --card: 0 0% 100%;
+    /* #ffffff - Clean Paper */
+    --card-foreground: 20 14% 12%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 14% 12%;
+    --primary: 221 83% 38%;
+    /* #103b8e - Oxford Royal Navy */
+    --primary-foreground: 0 0% 100%;
+    --secondary: 40 20% 92%;
+    /* #ede8de - Aged Vellum */
+    --secondary-foreground: 20 14% 12%;
+    --muted: 40 18% 93%;
+    --muted-foreground: 25 8% 45%;
+    /* #78716c - Stone Charcoal */
+    --accent: 40 24% 90%;
+    --accent-foreground: 20 14% 12%;
+    --destructive: 0 72% 45%;
+    /* #b91c1c - Wax Seal Crimson */
+    --destructive-foreground: 0 0% 100%;
+    --border: 30 10% 86%;
+    /* #dedbd4 - Crisp Bookbinder Border */
+    --input: 30 10% 86%;
+    --ring: 221 83% 38%;
+    --radius: 0.125rem;
+    /* Rectilinear, sharp edges (Academia style) */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-[#FAF8F5] text-stone-900 antialiased selection:bg-amber-200 selection:text-stone-950 min-h-screen;
+    background-image:
+      radial-gradient(#e5e1d8 1px, transparent 1px),
+      linear-gradient(to right, rgba(220, 215, 201, 0.25) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(220, 215, 201, 0.25) 1px, transparent 1px);
+    background-size: 24px 24px, 96px 96px, 96px 96px;
+    background-position: 0 0, 0 0, 0 0;
+  }
+}
+
+/* Scholarly & Editorial Utilities */
+.academia-card {
+  background: #ffffff;
+  border: 1px solid #d6d3d1;
+  box-shadow: 2px 2px 0px rgba(28, 25, 23, 0.08);
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.academia-card:hover {
+  border-color: #1c1917;
+  box-shadow: 4px 4px 0px rgba(28, 25, 23, 0.15);
+  transform: translate(-1px, -1px);
+}
+
+.academia-stamp {
+  border: 1.5px solid currentColor;
+  text-transform: uppercase;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  letter-spacing: 0.1em;
+  font-weight: 700;
+  padding: 0.15rem 0.5rem;
+}
+
+.academia-border-double {
+  border-style: double;
+  border-width: 3px;
+}
+
+/* Smooth Paper Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f5f2eb;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d6d3d1;
+  border: 1px solid #faf8f5;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a8a29e;
+}
+
+/* Editorial Markdown Prose */
+.prose {
+  color: #292524;
+  line-height: 1.8;
+  font-family: ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+.prose h1,
+.prose h2,
+.prose h3,
+.prose h4 {
+  color: #1c1917;
+  font-family: Georgia, Cambria, "Times New Roman", Times, serif;
+  font-weight: 700;
+  letter-spacing: -0.015em;
+}
+
+.prose h1 {
+  font-size: 1.65rem;
+  border-bottom: 2px solid #1c1917;
+  padding-bottom: 0.4rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.prose h2 {
+  font-size: 1.35rem;
+  color: #1e3a8a;
+  border-bottom: 1px solid #e7e5e4;
+  padding-bottom: 0.25rem;
+  margin-top: 1.4rem;
+  margin-bottom: 0.75rem;
+}
+
+.prose h3 {
+  font-size: 1.15rem;
+  margin-top: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.prose p {
+  margin-bottom: 1rem;
+  color: #44403c;
+}
+
+.prose ul,
+.prose ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  color: #44403c;
+}
+
+.prose ul {
+  list-style-type: square;
+}
+
+.prose ol {
+  list-style-type: decimal;
+}
+
+.prose li {
+  margin-bottom: 0.35rem;
+}
+
+.prose code {
+  background: #f5f2eb;
+  color: #881337;
+  border: 1px solid #e7e5e4;
+  padding: 0.15rem 0.4rem;
+  border-radius: 2px;
+  font-size: 0.875em;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  font-weight: 600;
+}
+
+.prose pre {
+  background: #1c1917;
+  border: 1px solid #292524;
+  padding: 1.1rem;
+  border-radius: 2px;
+  overflow-x: auto;
+  margin-bottom: 1.2rem;
+  box-shadow: 2px 2px 0px rgba(0, 0, 0, 0.15);
+}
+
+.prose pre code {
+  background: transparent;
+  border: none;
+  padding: 0;
+  color: #f5f5f4;
+  font-weight: 400;
+}
+
+.prose blockquote {
+  border-left: 3px solid #1e3a8a;
+  padding-left: 1.1rem;
+  color: #57534e;
+  font-style: italic;
+  margin-bottom: 1.2rem;
+  background: #f5f2eb;
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+}
+
+.prose a {
+  color: #1e3a8a;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  font-weight: 600;
+}
+
+.prose a:hover {
+  color: #2563eb;
+}
+
+.prose hr {
+  border-color: #d6d3d1;
+  margin: 1.75rem 0;
+}
+
+/* Timestamp badge in notes */
+.timestamp-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  background: #eff6ff;
+  color: #1d4ed8;
+  border: 1px solid #bfdbfe;
+  padding: 0.1rem 0.45rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, monospace;
+  font-size: 0.8em;
+  font-weight: 700;
+  border-radius: 2px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  user-select: none;
+}
+
+.timestamp-link:hover {
+  background: #1d4ed8;
+  color: #ffffff;
+  border-color: #1d4ed8;
+  transform: translateY(-1px);
+}
