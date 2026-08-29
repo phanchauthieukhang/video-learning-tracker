@@ -11,7 +11,7 @@ export function LoginButton() {
   const handleSignIn = async () => {
     try {
       setIsLoading(true);
-      await signIn("google", { callbackUrl: "/dashboard" });
+      await signIn("google", { redirectTo: "/dashboard" });
     } catch {
       setIsLoading(false);
     }
