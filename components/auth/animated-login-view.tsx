@@ -58,12 +58,12 @@ export function AnimatedLoginView() {
           <h1 className="academic-title font-serif text-3xl sm:text-4xl font-extrabold tracking-tight text-stone-900 leading-tight">
             Không Gian Nghiên Cứu <br />
             <span className="italic font-serif text-blue-900 underline decoration-stone-400 underline-offset-8">
-              Học Tập Qua Video
+              Học Tập Qua Video Youtube
             </span>
           </h1>
 
           <p className="text-stone-600 text-sm max-w-md font-sans">
-            Môi trường học tập kỷ luật, không quảng cáo, tích hợp sổ tay ghi chép Markdown và liên kết timestamp video tức thì.
+            Môi trường học tập tích hợp video youtube, tích hợp sổ tay ghi chép Markdown và liên kết timestamp video tức thì.
           </p>
         </div>
 
@@ -73,9 +73,8 @@ export function AnimatedLoginView() {
             <div className="flex items-center justify-between border-b-2 border-stone-800 pb-3 font-mono text-xs uppercase font-bold text-stone-800">
               <span className="flex items-center gap-1.5">
                 <GraduationCap className="h-4 w-4" />
-                <span>NHẬP HỌC / AUTHENTICATION</span>
+                <span>ĐĂNG NHẬP TÀI KHOẢN GMAIL / AUTHENTICATION</span>
               </span>
-              <span className="text-stone-500">GATEWAY #01</span>
             </div>
 
             <div className="space-y-3.5">
@@ -84,8 +83,8 @@ export function AnimatedLoginView() {
                   <PlaySquare className="h-4 w-4" />
                 </div>
                 <div>
-                  <h4 className="text-xs font-mono font-bold text-stone-900 uppercase tracking-wider">Nhúng Playlist YouTube Tập Trung</h4>
-                  <p className="text-xs text-stone-600 font-sans mt-0.5">Xem video không quảng cáo gợi ý phân tâm.</p>
+                  <h4 className="text-xs font-mono font-bold text-stone-900 uppercase tracking-wider">Tích Hợp Playlist Youtube</h4>
+                  <p className="text-xs text-stone-600 font-sans mt-0.5">Xem video không quảng cáo.</p>
                 </div>
               </div>
 
@@ -105,7 +104,7 @@ export function AnimatedLoginView() {
                 </div>
                 <div>
                   <h4 className="text-xs font-mono font-bold text-stone-900 uppercase tracking-wider">Đánh Dấu &amp; Theo Dõi Tiến Trình</h4>
-                  <p className="text-xs text-stone-600 font-sans mt-0.5">Ăn mừng pháo hoa Confetti khi hoàn tất bài giảng.</p>
+                  <p className="text-xs text-stone-600 font-sans mt-0.5">Pháo hoa khi hoàn tất bài giảng.</p>
                 </div>
               </div>
             </div>
@@ -114,7 +113,7 @@ export function AnimatedLoginView() {
               <LoginButton />
               <div className="flex items-center justify-center gap-1.5 text-[11px] text-stone-500 font-mono">
                 <ShieldCheck className="h-3.5 w-3.5 text-stone-700" />
-                <span>Bảo mật dữ liệu cá nhân theo Google Account</span>
+                <span>Dữ liệu bài giảng được lưu trên Google</span>
               </div>
             </div>
           </div>

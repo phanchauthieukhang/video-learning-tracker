@@ -57,7 +57,7 @@ export function DashboardHero({ playlists, userName }: DashboardHeroProps) {
           </h1>
 
           <p className="text-sm text-stone-600 font-sans leading-relaxed">
-            Học tập chuyên sâu qua các bài giảng YouTube không phân tâm, ghi chép luận điểm định dạng Markdown và theo dõi tiến độ hoàn thành.
+            Học tập chuyên sâu qua các bài giảng YouTube, ghi chép luận điểm định dạng Markdown và theo dõi tiến độ hoàn thành.
           </p>
         </div>
 
@@ -98,7 +98,7 @@ export function DashboardHero({ playlists, userName }: DashboardHeroProps) {
             </div>
             <div>
               <p className="text-[10px] font-mono uppercase tracking-wider text-stone-500 font-bold">ĐÃ HOÀN THÀNH</p>
-              <p className="text-xl sm:text-2xl font-serif font-extrabold text-emerald-800 font-mono">
+              <p className="text-xl sm:text-2xl font-extrabold text-emerald-800 font-mono">
                 {totalCompleted} <span className="text-xs font-sans text-stone-500 font-normal">bài</span>
               </p>
             </div>
@@ -111,7 +111,7 @@ export function DashboardHero({ playlists, userName }: DashboardHeroProps) {
             </div>
             <div>
               <p className="text-[10px] font-mono uppercase tracking-wider text-stone-500 font-bold">TỔNG TIẾN ĐỘ</p>
-              <p className="text-xl sm:text-2xl font-serif font-extrabold text-stone-900 font-mono">{overallPercentage}%</p>
+              <p className="text-xl sm:text-2xl font-extrabold text-stone-900 font-mono">{overallPercentage}%</p>
             </div>
           </div>
         </div>
