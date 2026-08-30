@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { Loader2, Play, Bookmark, Clock, Eye, EyeOff, Maximize2, Sparkles } from "lucide-react";
+import { Loader2, Clock } from "lucide-react";
 
 declare global {
   interface Window {
@@ -57,7 +57,6 @@ export function YouTubePlayer({ videoId, onEnded }: YouTubePlayerProps) {
   const playerRef = useRef<YTPlayerInstance | null>(null);
   const [isApiReady, setIsApiReady] = useState(false);
   const [isLoading, setIsLoading] = useState(true);
-  const [isCleanView, setIsCleanView] = useState(false);
 
   // 1. Load YouTube IFrame API script once
   useEffect(() => {
@@ -188,36 +187,14 @@ export function YouTubePlayer({ videoId, onEnded }: YouTubePlayerProps) {
   return (
     <div className="relative border-2 border-stone-800 bg-stone-900 shadow-[4px_4px_0px_rgba(28,25,23,0.15)]">
       {/* Top Academic Header Tape */}
-      <div className="flex flex-wrap items-center justify-between gap-2 px-3.5 py-2 bg-stone-900 border-b border-stone-800 text-stone-300 text-xs font-mono">
+      <div className="flex items-center justify-between px-3.5 py-1.5 bg-stone-900 border-b border-stone-800 text-stone-300 text-xs font-mono">
         <div className="flex items-center gap-2">
           <span className="inline-block h-2 w-2 bg-red-600 rounded-none animate-pulse" />
           <span className="font-bold tracking-wider uppercase text-white">LECTURE REEL // VIDEO ID: {videoId}</span>
         </div>
-
-        {/* Clean View / Code Focus Mode Toggle */}
-        <div className="flex items-center gap-2">
-          <button
-            type="button"
-            onClick={() => setIsCleanView(!isCleanView)}
-            title="Bật/Tắt chế độ Soi Code: Cắt bỏ dải đen tiêu đề ở mép trên video để nhìn rõ toàn bộ code"
-            className={`flex items-center gap-1.5 px-2.5 py-1 text-[11px] font-mono font-bold uppercase transition-all border ${
-              isCleanView
-                ? "bg-amber-400 text-stone-950 border-amber-500 shadow-sm"
-                : "bg-stone-800 text-stone-300 border-stone-700 hover:bg-stone-700 hover:text-white"
-            }`}
-          >
-            {isCleanView ? (
-              <>
-                <Eye className="h-3 w-3 text-stone-950 stroke-[2.5]" />
-                <span>Đang Bật Soi Code (Ẩn Viền)</span>
-              </>
-            ) : (
-              <>
-                <EyeOff className="h-3 w-3 text-stone-400" />
-                <span>🔍 Chế Độ Soi Code (Ẩn Tiêu Đề)</span>
-              </>
-            )}
-          </button>
+        <div className="hidden sm:flex items-center gap-2 text-[11px] text-stone-400">
+          <Clock className="h-3 w-3 text-amber-500" />
+          <span>Interactive Timestamp Player</span>
         </div>
       </div>
 
@@ -231,34 +208,8 @@ export function YouTubePlayer({ videoId, onEnded }: YouTubePlayerProps) {
             </div>
           </div>
         )}
-
-        {/* Player Container with Clean View Crop Transformation */}
-        <div
-          className={`h-full w-full transition-transform duration-300 origin-center ${
-            isCleanView
-              ? "scale-[1.09] -translate-y-4"
-              : "scale-100 translate-y-0"
-          }`}
-        >
-          <div ref={containerRef} className="h-full w-full" />
-        </div>
+        <div ref={containerRef} className="h-full w-full" />
       </div>
-
-      {/* Clean View Helper Banner */}
-      {isCleanView && (
-        <div className="px-3.5 py-1.5 bg-amber-950/80 border-t border-amber-800/60 text-amber-200 text-[11px] font-mono flex items-center justify-between">
-          <span className="flex items-center gap-1.5">
-            <Sparkles className="h-3.5 w-3.5 text-amber-400" />
-            <span>Đã kích hoạt chế độ phóng to cắt mép: Tiêu đề và dải đen phía trên đã bị ẩn hoàn toàn!</span>
-          </span>
-          <button
-            onClick={() => setIsCleanView(false)}
-            className="underline hover:text-white font-bold"
-          >
-            Trở lại bình thường
-          </button>
-        </div>
-      )}
     </div>
   );
 }
