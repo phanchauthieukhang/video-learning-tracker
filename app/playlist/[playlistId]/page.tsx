@@ -89,7 +89,7 @@ export default async function PlaylistPage({
                 </div>
                 {activeVideo.channelTitle && (
                   <p className="text-xs text-stone-500 font-sans">
-                    Giảng viên: <span className="font-semibold text-stone-800">{activeVideo.channelTitle}</span>
+                    Kênh Ytb: <span className="font-semibold text-stone-800">{activeVideo.channelTitle}</span>
                   </p>
                 )}
               </div>

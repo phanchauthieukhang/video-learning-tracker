@@ -111,7 +111,7 @@ export function PlaylistCard({ playlist, index }: PlaylistCardProps) {
             </h3>
             {playlist.channelTitle && (
               <p className="text-xs text-stone-500 line-clamp-1 font-medium font-sans">
-                Giảng viên: <span className="text-stone-700 font-semibold">{playlist.channelTitle}</span>
+                Kênh Ytb: <span className="text-stone-700 font-semibold">{playlist.channelTitle}</span>
               </p>
             )}
           </div>

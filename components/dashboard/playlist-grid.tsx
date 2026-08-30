@@ -202,7 +202,7 @@ export function PlaylistGrid({ playlists }: PlaylistGridProps) {
                       </Link>
                       <div className="flex items-center gap-3 text-xs text-stone-500 font-sans">
                         {playlist.channelTitle && (
-                          <span>Giảng viên: <strong className="text-stone-700">{playlist.channelTitle}</strong></span>
+                          <span>Kênh Ytb: <strong className="text-stone-700">{playlist.channelTitle}</strong></span>
                         )}
                         <span>•</span>
                         <span className="font-mono">{playlist.videoCount} bài giảng</span>

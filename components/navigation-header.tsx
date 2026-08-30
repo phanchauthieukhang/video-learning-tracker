@@ -74,10 +74,7 @@ export function NavigationHeader({ user }: NavigationHeaderProps) {
         </Link>
 
         <div className="flex items-center gap-4">
-          <div className="hidden sm:flex items-center gap-1.5 text-[11px] font-mono font-bold uppercase px-2.5 py-1 bg-[#F0ECE1] border border-stone-300 text-stone-700">
-            <GraduationCap className="h-3.5 w-3.5 text-stone-900" />
-            <span>SESSION ACTIVE</span>
-          </div>
+
           <UserMenu user={user} />
         </div>
       </div>

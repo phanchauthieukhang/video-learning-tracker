@@ -41,9 +41,7 @@ export default async function DashboardPage() {
                   {playlists.length} KHÓA HỌC
                 </span>
               </h2>
-              <span className="hidden sm:inline-block text-[11px] font-mono text-stone-500 uppercase tracking-widest">
-                ACADEMIC ARCHIVE INDEX
-              </span>
+
             </div>
 
             <PlaylistGrid playlists={playlists} />

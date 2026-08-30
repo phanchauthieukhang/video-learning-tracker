@@ -203,7 +203,7 @@ export function JournalEditor({
           </div>
           <div>
             <h3 className="font-serif font-bold text-base text-stone-900 flex items-center gap-2">
-              <span>Sổ Tay Nghiên Cứu & Nhật Ký</span>
+              <span>Note Ghi chú & Nhật ký học tập</span>
             </h3>
             <span className="text-[10px] font-mono tracking-widest text-stone-500 uppercase">
               DOCUMENTATION / SCHOLAR NOTEBOOK
