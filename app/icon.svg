@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Sharp rectilinear background in deep academic charcoal -->
+  <rect width="32" height="32" rx="2" fill="#1C1917" />
+  <rect x="1" y="1" width="30" height="30" rx="1" fill="none" stroke="#D97706" stroke-width="1.5" />
+  
+  <!-- Open Academic Book Icon in warm parchment ivory -->
+  <path d="M7 9.5C7 8.5 9 8 16 9.5V23.5C9 22 7 22.5 7 23.5V9.5Z" fill="#FAF8F5" />
+  <path d="M25 9.5C25 8.5 23 8 16 9.5V23.5C23 22 25 22.5 25 23.5V9.5Z" fill="#FAF8F5" />
+  <line x1="16" y1="9.5" x2="16" y2="23.5" stroke="#1C1917" stroke-width="1.2" />
+  
+  <!-- Play Ribbon / Bookmark in Gold -->
+  <path d="M14.5 13.5L18.5 16L14.5 18.5V13.5Z" fill="#D97706" />
+</svg>

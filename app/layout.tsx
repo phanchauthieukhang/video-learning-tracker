@@ -6,9 +6,14 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Video Learning Tracker - Học tập YouTube không xao nhãng",
+  title: "Academia Log — Video Learning Tracker",
   description:
-    "Quản lý lộ trình học tập qua video YouTube, viết nhật ký Markdown và tự động lưu tiến độ học.",
+    "Không gian học tập chuyên sâu qua bài giảng YouTube, ghi chép nhật ký nghiên cứu Markdown và đồng bộ tiến độ học tập.",
+  icons: {
+    icon: "/icon.svg",
+    shortcut: "/icon.svg",
+    apple: "/icon.svg",
+  },
 };
 
 export default function RootLayout({
