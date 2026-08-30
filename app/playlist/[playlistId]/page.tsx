@@ -60,7 +60,7 @@ export default async function PlaylistPage({
             className="inline-flex items-center gap-1.5 px-3 py-1 bg-white border border-stone-800 text-xs font-mono font-bold uppercase tracking-wider text-stone-900 shadow-[2px_2px_0px_#1c1917] hover:bg-stone-100 transition-all group"
           >
             <ChevronLeft className="h-4 w-4 group-hover:-translate-x-0.5 transition-transform" />
-            <span>&larr; Quay Lại Tổng Quan</span>
+            <span>Quay Lại Tổng Quan</span>
           </Link>
 
           <div className="hidden sm:flex items-center gap-2 font-serif text-xs text-stone-600">
