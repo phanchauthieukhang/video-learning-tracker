@@ -1,0 +1,28 @@
+name: CI - Kiem Tra Ma Nguon
+
+# 1. Kích hoạt tự động khi có thao tác Push hoặc Pull Request
+on:
+  push:
+    branches: [ "main", "develop" ]
+  pull_request:
+    branches: [ "main", "develop" ]
+
+# 2. Các công việc máy chủ GitHub sẽ làm
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest # Chạy trên một máy chủ Linux ảo miễn phí
+
+    steps:
+    - name: Tải mã nguồn về máy ảo
+      uses: actions/checkout@v3
+
+    - name: Cài đặt môi trường Node.js
+      uses: actions/setup-node@v3
+      with:
+        node-version: '18.x' # Tùy chỉnh theo version nhóm bạn dùng
+
+    - name: Cài đặt các thư viện (Dependencies)
+      run: npm install
+
+    - name: Chạy thử tiến trình Build
+      run: npm run build
